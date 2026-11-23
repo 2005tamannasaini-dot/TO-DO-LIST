@@ -9,5 +9,11 @@ def show_menu():
     print("3. UPDATE TASK")
     print("4. DELETE TASK")
     print("5. EXIT")
+ 
 
-show_menu()    
+def add_task():
+    task = input("Enter a New Task:")
+    tasks.append(task)
+    print("Task Added Successfully.")
+
+show_menu()       
