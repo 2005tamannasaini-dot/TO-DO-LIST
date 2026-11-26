@@ -24,25 +24,38 @@ def view_task():
             print("Task:",task)
 
 def update_task():
-    update_task = input("Enter Task to update:")
-    new_task = input("Enter New Taks:")
+    old_task = input("Enter Task to update:")
+    new_task = input("Enter New Task:")
 
     if not tasks:
-        print("No Found Task")
+        print("No Tasks Found.")
 
     else:
         for task in tasks:
-            if task.lower() == update_task.lower():
+            if task.lower() == old_task.lower():
                 index = tasks.index(task)
                 tasks[index] = new_task
-                print("Contact updated successfully!")
+                print("Task updated successfully!")
                 break
 
         else:
             print("Task not found.")
 
+def delete_task():
+    delete_task = input("Enter Task to Delete.")
+
+    if not tasks:
+        print("No Tasks Found .")
+
+    else:
+        for task in tasks:
+            if task.lower() == delete_task.lower():
+                tasks.remove(task)    
+                print("Task Deleted successfully!")
+                break
 
 show_menu() 
 add_task()
 view_task()      
 update_task()
+delete_task()
