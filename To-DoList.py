@@ -55,7 +55,23 @@ def delete_task():
                 break
 
 show_menu() 
-add_task()
-view_task()      
-update_task()
-delete_task()
+while True:    
+    choice = input("Enter Your Choice:")
+
+    if choice == "1":
+        add_task()
+        
+    elif choice == "2":
+        view_task()
+
+    elif choice == "3":
+        update_task()
+
+    elif choice == "4":
+        delete_task()
+
+    elif choice == "5":
+        print("To-Do List Closed.")        
+
+    else:
+        print("Invalid Choice.")    
