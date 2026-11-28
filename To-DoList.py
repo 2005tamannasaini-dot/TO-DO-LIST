@@ -53,9 +53,9 @@ def delete_task():
                 tasks.remove(task)    
                 print("Task Deleted successfully!")
                 break
-
-show_menu() 
-while True:    
+while True:  
+    show_menu() 
+  
     choice = input("Enter Your Choice:")
 
     if choice == "1":
@@ -71,7 +71,8 @@ while True:
         delete_task()
 
     elif choice == "5":
-        print("To-Do List Closed.")        
+        print("To-Do List Closed.")  
+        break      
 
     else:
         print("Invalid Choice.")    
